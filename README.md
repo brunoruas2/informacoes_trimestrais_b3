@@ -1,5 +1,7 @@
 # Formulário de Informações Trimestrais (ITR)
 
+Fonte https://dados.gov.br/dataset/cia_aberta-doc-itr
+
 O FORMULÁRIO DE INFORMAÇÕES TRIMESTRAIS (ITR) é um documento eletrônico, de encaminhamento periódico previsto no artigo 21, inciso V, da Instrução CVM nº 480/09, cujo encaminhamento à CVM deve se dar por meio do Sistema Empresas.NET.
 
 Segundo o artigo 29 da Instrução CVM nº 480/09, o formulário ITR deverá ser preenchido com os dados das informações contábeis trimestrais elaboradas de acordo com as regras contábeis aplicáveis ao emissor, nos termos dos artigos 25 a 27 da Instrução.
