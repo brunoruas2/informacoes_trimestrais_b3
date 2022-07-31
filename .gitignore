@@ -1,12 +1,2 @@
-src/zip/itr_cia_aberta_2011.zip
-src/zip/itr_cia_aberta_2012.zip
-src/zip/itr_cia_aberta_2013.zip
-src/zip/itr_cia_aberta_2014.zip
-src/zip/itr_cia_aberta_2015.zip
-src/zip/itr_cia_aberta_2016.zip
-src/zip/itr_cia_aberta_2017.zip
-src/zip/itr_cia_aberta_2018.zip
-src/zip/itr_cia_aberta_2019.zip
-src/zip/itr_cia_aberta_2020.zip
-src/zip/itr_cia_aberta_2021.zip
-src/zip/itr_cia_aberta_2022.zip
+src/zip/*
+data*

@@ -47,4 +47,4 @@ def getCompanieData():
         companieData = pd.concat([companieData,demonstrative])
 
     companieData.to_excel('data\\{}.xlsx'.format(nameFile[15:-9]),index=False)
-    print('\n\nArquivo criado na pasta "data".\n\n')
+    print('\n\nArquivo criado na pasta "data".')

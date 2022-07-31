@@ -17,4 +17,4 @@ def companiesList():
 
     companiesList = companiesList.drop_duplicates()
     companiesList.to_excel('data\\companiesList.xlsx',index=False)
-    print('\n\nCompanies Listed file created in data folder.\n\n')
+    print('\n\nLista de companhias atualizada. Verifique o arquivo "companiesList.xlsx".')
