@@ -13,20 +13,21 @@ def progressBar(count, total, suffix=''):
     sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percent, '%', suffix))
     sys.stdout.flush()
 
-# getting the zip files
-url = requests.get('https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/').text
-url = url.split('.zip\">')
+def updateZipFolder():
+    # getting the zip files
+    url = requests.get('https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/').text
+    url = url.split('.zip\">')
 
-files = []
-for item in url:
-    if item[0:3] == 'itr':
-        files.append(item.split('</a>')[0])
+    files = []
+    for item in url:
+        if item[0:3] == 'itr':
+            files.append(item.split('</a>')[0])
 
-# downloading the files into respository src\zip
-print('Downloading Files\n')
+    # downloading the files into respository src\zip
+    print('Downloading Files\n')
 
-for url in files:
-    progressBar(files.index(url)*2,len(url))
-    urlRequest.urlretrieve('https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/{}'.format(url),'src\zip\{}'.format(url))
+    for url in files:
+        progressBar(files.index(url)*2,len(url))
+        urlRequest.urlretrieve('https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/{}'.format(url),'src\zip\{}'.format(url))
 
-print('\n\nFiles Updated')
+    print('\n\nFiles Updated')
