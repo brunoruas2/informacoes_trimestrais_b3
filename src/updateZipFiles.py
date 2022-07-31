@@ -27,7 +27,7 @@ def updateZipFolder():
     print('Downloading Files\n')
 
     for url in files:
-        progressBar(files.index(url)*2,len(url))
+        progressBar(files.index(url)*2,len(url)-1)
         urlRequest.urlretrieve('https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/{}'.format(url),'src\zip\{}'.format(url))
 
     print('\n\nFiles Updated')

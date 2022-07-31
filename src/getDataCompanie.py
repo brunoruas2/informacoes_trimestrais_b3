@@ -1,6 +1,16 @@
 import os
+import sys
 import zipfile as zip
 import pandas as pd
+
+def progressBar(count, total, suffix=''):
+    barLenght = 60
+    filledLength = int(round(barLenght * count / float(total)))
+    percent = round(100.0 * count / float(total), 1)
+    bar = '=' * filledLength + '-' * (barLenght - filledLength)
+    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percent, '%', suffix))
+    sys.stdout.flush()
+
 
 def getCompanieData():
     PATH = 'src\zip'
@@ -14,7 +24,10 @@ def getCompanieData():
     files = os.listdir(PATH)
 
     companieData = pd.DataFrame()
+    file = files[0]
     for file in files:
+        progressBar(files.index(file),len(files)-1)
+        
         zf = zip.ZipFile(PATH + '\\' + file)
         nameFile = zf.namelist()
         nameFile.pop(0)
@@ -25,9 +38,9 @@ def getCompanieData():
         [consolidado.append(x) if nameFile.index(x)%2 == 0 else individual.append(x) for x in nameFile]
         
         if wichTypeFile == '1':
-            nameFile = individual[int(wichFile)-1]
-        else:
             nameFile = consolidado[int(wichFile)-1]
+        else:
+            nameFile = individual[int(wichFile)-1]
         
         demonstrative = pd.read_csv(zf.open(nameFile),encoding='ISO-8859-1',sep=';')
         demonstrative = demonstrative[demonstrative['CD_CVM'] == int(cvmCode)]
