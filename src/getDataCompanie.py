@@ -46,5 +46,5 @@ def getCompanieData():
         demonstrative = demonstrative[demonstrative['CD_CVM'] == int(cvmCode)]
         companieData = pd.concat([companieData,demonstrative])
 
-    companieData.to_excel('data\\{}.xlsx'.format(nameFile[15:-9]),index=False)
+    companieData.to_excel('data\\{}_{}.xlsx'.format(nameFile[15:-9],companieData['DENOM_CIA'].iloc[0]),index=False)
     print('\n\nArquivo criado na pasta "data".')
