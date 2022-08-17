@@ -1,5 +1,12 @@
 # Module Python para Coleta do Formulário de Informações Trimestrais (ITR)
 
+## Disclaimer
+Depois que eu me coloquei o desafio de fazer esse repositório, tive acesso a algumas outras iniciativas que também atuaram na mesma dificuldade. Para não cometer o erro de não dar crédito, vou listar aqui outros esforços que eu acabei encontrando após o início dessa empreitada.
+
+1. Código Quant - Finanças Quantitativas (https://www.youtube.com/watch?v=LCMgVO1BOVQ)
+2. Edufinance (https://www.youtube.com/watch?v=08zIQxZJYpc)
+
+
 ## Apresentação
 Você já se perdeu no trabalho de atualizar suas planilhas de análise de empresas listadas em bolsa? Pois é, eu também!
 
